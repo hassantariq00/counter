@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 id="c"></h1>
+        <button id="dec" class="btn btn-lg btn-danger">decrease</button>
+        <button id="res" class="btn btn-lg btn-warning">Reset</button>
+        <button id="inc" class="btn btn-lg btn-success">Increase</button>
+    </div>
+
+
+
+<script>
+    let dec = document.querySelector('#dec')
+    let res = document.querySelector('#res')
+    let inc = document.querySelector('#inc')
+    let c = document.querySelector('#c');
+    let count = 0;
+    c.innerHTML = count;
+
+    dec.addEventListener('click',()=>{
+        count = count - 1;
+        c.innerHTML = count;
+        if(count < 0){
+            c.style.color = 'red'
+        }
+    })
+
+    res.addEventListener('click',()=>{
+        count = 0;
+        c.innerHTML = count;
+        c.style.color = 'none'
+    })
+
+    inc.addEventListener('click',()=>{
+        count = count + 1;
+        c.innerHTML = count;
+        if(count > 0){
+            c.style.color = 'green'
+        }
+    })
+
+</script>
+
+
+</body>
+
+
+
+</html>
